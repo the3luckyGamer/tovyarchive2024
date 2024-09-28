@@ -5,7 +5,7 @@ import prisma from '@/utils/database';
 import { withSessionRoute } from '@/lib/withSession'
 import { getUsername, getThumbnail, getDisplayName } from '@/utils/userinfoEngine'
 import { getRegistry } from '@/utils/registryManager';
-import * as noblox from 'noblox.js'
+import * as noblox from '@/utils/noblox'
 
 type User = {
 	userId: number
