@@ -29,7 +29,7 @@ export async function handler(
 	const activityconfig = await getConfig('activity', parseInt(req.query.id as string));
 
 	res.status(200).send({
-		data: activityconfig,
+		data: JSON.stringify(activityconfig),
 		success: true,
 	});
 }
