@@ -19,7 +19,7 @@ export async function handler(req,res) {
 	const activityconfig = await getConfig('activity', 10503931);
 
 	res.status(200).send({
-		data: activityconfig,
+		data: activityconfig.key,
 		success: true,
 	});
 }
