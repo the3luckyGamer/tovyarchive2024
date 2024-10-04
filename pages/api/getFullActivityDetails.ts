@@ -6,9 +6,7 @@ import { withPermissionCheck } from '@/utils/permissionsManager'
 import * as noblox from 'noblox.js'
 type Data = {
 	success: boolean
-	error?: string
-	roles?: any
-	currentRole?: any
+	data: any
 }
 
 export default withPermissionCheck(handler, 'admin');
