@@ -30,8 +30,15 @@ export async function getRobloxDisplayName(id: number) {
 
 // get user id
 export async function getRobloxUserId(username: string, origin?: string) {
-  const { data } = await axios.post(
+  /*const { data } = await axios.post(
     `${origin ? (origin + "/") : "/"}api/roblox/id`,
+    {
+      keyword: username
+    }
+  );*/
+
+  const { data } = await axios.post(
+    `/api/roblox/id`,
     {
       keyword: username
     }
