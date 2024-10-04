@@ -4,7 +4,7 @@ import prisma from '@/utils/database';
 import { withPermissionCheck } from '@/utils/permissionsManager'
 import * as noblox from 'noblox.js'
 
-export default withPermissionCheck(handler, 'admin');
+//export default withPermissionCheck(handler, 'admin');
 
 export async function handler(req,res) {
 
