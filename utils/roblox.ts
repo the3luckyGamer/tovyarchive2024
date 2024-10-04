@@ -35,16 +35,25 @@ export async function getRobloxUserId(username: string, origin?: string) {
     {
       keyword: username
     }
-  );*/
-
-  const { data } = await axios.post(
-    `/api/roblox/id`,
-    {
-      keyword: username
-    }
   );
 
 console.log(`${origin ? (origin + "/") : "/"}api/roblox/id`)
 
-  return data.data[0].id;
+  return data.data[0].id;*/
+
+  const { data } = await axios.post(
+      `https://users.roblox.com/v1/usernames/users`,
+      {
+        usernames: [username],
+        excludeBannedUsers: true,
+      },
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    return data.data[0].id;
 }
