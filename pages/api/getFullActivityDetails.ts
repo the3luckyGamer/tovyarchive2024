@@ -20,7 +20,7 @@ export async function handler(
 
 	const workspace = await prisma.workspace.findFirst({
 		where: {
-			groupId: "10503931",
+			groupId: 10503931,
 		}
 	});
 	if (!workspace) return res.status(404).json({ success: false, error: 'Workspace not found' });
